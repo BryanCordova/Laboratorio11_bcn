@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMDemo.Views.Operaciones">
+    <ContentPage.Resources>
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="PlaceholderColor" Value="#360808"/>
+            <Setter Property="BackgroundColor" Value="#EEEEEE"/>
+            <Setter Property="TextColor" Value="#333333"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="30" BackgroundColor="#DAE7FF">
+            <Entry Placeholder="Valor 1" Style="{StaticResource EntryStyle}" Text="{Binding Valor1}"></Entry>
+            <Entry Placeholder="Valor 2" Style="{StaticResource EntryStyle}" Text="{Binding Valor2}"></Entry>
+            <Entry Placeholder="Valor 3" Style="{StaticResource EntryStyle}" Text="{Binding Valor3}"></Entry>
+
+            <Button Command="{Binding Sumar}" Text="Sumar" BackgroundColor="#26B8AD" TextColor="White" FontSize="Title" FontAttributes="Bold"></Button>
+            <Label Text="{Binding ResultadoSumar}" FontAttributes="Bold" FontSize="Title"/>
+
+            <Button Command="{Binding Multiplicar}" Text="Multiplicar" BackgroundColor="#536DFE" TextColor="White" FontSize="Title" FontAttributes="Bold"></Button>
+            <Label Text="{Binding ResultadoMultiplicar}" FontAttributes="Bold" FontSize="Title"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
